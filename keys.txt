@@ -1,0 +1,10 @@
+found key = Dlw$c_##
+
+real	151m41.431s
+user	300m51.728s
+sys	0m21.568s
+
+1g 0:03:48:30 DONE (2016-10-30 02:51) 0.000072g/s 10166Kp/s 10166Kc/s 10166KC/s w$c^s!..w$c_UZ
+
+9m7R2L           (question4)
+1g 0:00:44:15 DONE (2016-10-30 13:35) 0.000376g/s 22815Kp/s 22815Kc/s 22815KC/s 9m7R2L..9mK5^f
