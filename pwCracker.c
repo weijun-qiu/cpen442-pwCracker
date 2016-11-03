@@ -10,13 +10,13 @@
 
 // int wc_ShaHash(const byte* data, word32 len, byte* hash)
 
-#define LIMIT 100000000
+#define LIMIT 10000
 #define DIGEST_LEN 20
 #define THREAD_NUM 2
-#define PASS_LEN 8
+#define PASS_LEN 4
 
-// const char salt[2] = "nk";
-const char salt[2] = "";
+const char salt[2] = "nk";
+//const char salt[2] = "";
 
 byte target[DIGEST_LEN];
 int alive_count;
@@ -56,8 +56,8 @@ void *brute_force(void *_start)
     byte data[PASS_LEN + strlen(salt) + 1];
     memset(hash, 0, sizeof(hash));
     while (trial < end) {
-        snprintf((char *)data, sizeof(data), "%s%08d", salt, trial);
-        printc(data, sizeof(data));
+        snprintf((char *)data, sizeof(data), "%s%04d", salt, trial);
+        // printc(data, sizeof(data));
         wc_ShaUpdate(sha, data, sizeof(data) - 1);
         wc_ShaFinal(sha, hash);
         if (!memcmp(target, hash, DIGEST_LEN)) {
@@ -116,8 +116,8 @@ int main()
     wc_ShaFinal(sha, target);
     */
     
-    // char _target[] = "C79A7C46DCE011C8488E096A1ED89771AD244CC4";
-    char _target[] = "65CD30D51BF1D197AD61163AC0C3103B4A6D5A20";
+    char _target[] = "C79A7C46DCE011C8488E096A1ED89771AD244CC4";
+    // char _target[] = "65CD30D51BF1D197AD61163AC0C3103B4A6D5A20";
     atob(target, _target, sizeof(target));
     printf("target: ");
     printb(target, sizeof(target));
