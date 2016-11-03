@@ -1,6 +1,8 @@
 # cpen442-pwCracker
-Code for CPEN442 Assignment4
-All executables in this repo is to be run on macos, except the .exe files.
+Code for CPEN442 Assignment4.
+
+## Environment
+All code, except .exe files, in this project is targeting macOS 10.
 
 ## Build
 Makefile is provided.
