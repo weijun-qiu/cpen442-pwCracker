@@ -6,4 +6,4 @@ All code, except .exe files, in this project is targeting macOS 10.
 
 ## Build
 Makefile is provided.
-Please ensuer wolfSSL 3.9.10 is installed before make.
+Please ensure wolfSSL 3.9.10 is installed before make.
